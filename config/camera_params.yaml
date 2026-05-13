@@ -1,0 +1,34 @@
+# Astra Camera Params
+camera:
+  range:
+    min: 0.6    # meters
+    max: 8.0    # meters
+  fov:
+    horizontal: 60.0    # degrees
+    vertical: 49.5      # degrees
+    diagonal: 73.0      # degrees
+  resolution:
+    rgb:
+      width: 640
+      height: 480
+      fps: 30
+    depth:
+      width: 640
+      height: 480
+      fps: 30
+  physical:
+    width: 0.165   # meters (165mm)
+    height: 0.030  # meters (30mm)
+    depth: 0.040   # meters (40mm)
+
+# Algorithm parameters
+algorithm:
+  activation:
+    min_distance: 1.0    # meters for optimal detection
+    max_distance: 4.0    # meters for unblocked scenario
+    blocked_max_distance: 3.0  # meters for blocked scenario
+  mapping:
+    max_accurate_range: 2.0  # meters (from Fig.5)
+  navigation:
+    approach_radius: 0.5  # meters
+    circle_points: 8

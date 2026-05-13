@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- astra camera -->
+    <include file="$(find astra_camera)/launch/astra.launch"/>
+
+    <!-- camera mounting -->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="camera_mount"
+          args="0.2 0 0.3 0 0 0 base_link camera_rgb_optical_frame"/>
+
+    <!-- ALL THE NODES -->
+    <!-- finds hands/poses -->
+    <node name="pose_finder" pkg="my_home_robot" type="find_poses.py" output="screen"/>
+
+    <!-- figures out head direction -->
+    <node name="head_pose" pkg="my_home_robot" type="head_pose_estimation.py" output="screen"/>
+
+    <!-- maps where the person is -->
+    <node name="robot_mapper" pkg="my_home_robot" type="my_robot_mapping.py" output="screen"/>
+
+    <!-- tests activation accuracy (optional) -->
+    <node name="activation_tester" pkg="my_home_robot" type="activation_function.py" output="screen"/>
+
+    <!-- drives to person (smart version) -->
+    <node name="drive_controller" pkg="my_home_robot" type="drive_to_person_v2.py" output="screen"/>
+
+    <!-- rviz for visualization -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find my_home_robot)/my_config.rviz"/>
+
+</launch>
