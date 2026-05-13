@@ -229,9 +229,10 @@ Me - Pokman Han - Pui Ching Middle School, Macau SAR, China | University of Cali
 
 ## 🙏 Acknowledgments
 
-- OpenVINO team for the pose estimation models I referenced
-- ROS community for the navigation stack I built on
-- Astra camera developers for the RGB-D driver I used
+- OpenVINO Team for the pose estimation models I referenced
+- ROS Communnity for the navigation stack I built on
+- Astra Camera Developers for the RGB-D driver I used
+- Teachers at Pui Ching Middle School's FABLAB for assisting me throughout this project
 
 ---
 
