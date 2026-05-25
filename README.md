@@ -103,7 +103,7 @@ pip install mediapipe  # optional, for better pose detection
 1. **Clone my repository** into your catkin workspace:
 ```bash
 cd ~/catkin_ws/src
-git clone https://github.com/yourusername/home_service_robot.git
+git clone https://github.com/hanpokman/home_service_robot.git
 ```
 
 2. **Build the package**:
